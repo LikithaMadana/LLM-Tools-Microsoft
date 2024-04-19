@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodistan</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #ffcc00;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .menu {
+            background-color: #fff;
+            padding: 20px;
+        }
+        .menu h2 {
+            font-size: 20px;
+            color: #333;
+        }
+        .menu img {
+            max-width: 100%;
+            height: auto;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Foodistan</h1>
+        <img src="https://cdn.dribbble.com/users/4913590/screenshots/15283932/media/b430f8df20aa4f1cc96e412c68db44d2.jpg" alt="Foodistan Logo">
+        <img src="https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/restaurant%2F649660%2Frestaurant020220816105121.jpg" alt="Restaurant Image">
+        <button onclick="showHomePage()">Home</button>
+        <button onclick="showMenu()">Menu</button>
+        <button onclick="showAbout()">About</button>
+    </div>
+    <div class="menu" id="menu">
+        <h2>Menu</h2>
+        <div class="recipe">
+            <img src="https://littlesunnykitchen.com/wp-content/uploads/Chicke-tikka-masala-2-7.jpg" alt="Butter Chicken">
+            <p>Butter Chicken</p>
+            <p>Price: $12.99</p>
+            <button onclick="viewIngredients('Butter Chicken')">View Ingredients</button>
+            <button onclick="order('Butter Chicken')">Order</button>
+        </div>
+        <div class="recipe">
+            <img src="https://minimalistbaker.com/wp-content/uploads/2018/10/Vegan-Palak-Paneer-SQUARE.jpg" alt="Palak Paneer">
+            <p>Palak Paneer</p>
+            <p>Price: $10.99</p>
+            <button onclick="viewIngredients('Palak Paneer')">View Ingredients</button>
+            <button onclick="order('Palak Paneer')">Order</button>
+        </div>
+        <!-- Add more recipes here -->
+    </div>
+    <div class="footer">
+        © 2023 Foodistan. All rights reserved.
+    </div>
+    <script>
+        // Add your JavaScript code here
+        function showHomePage() {
+            // Show Foodistan home page
+            // You can customize this function to display the desired content
+            alert("Welcome to Foodistan!");
+        }
+        function showMenu() {
+            // Show Foodistan menu
+            // You can customize this function to display the menu items
+            document.getElementById("menu").style.display = "block";
+        }
+        function showAbout() {
+            // Show Foodistan about page
+            // You can customize this function to display information about Foodistan
+            alert("About Foodistan: We serve delicious Indian cuisine!");
+        }
+        function viewIngredients(recipeName) {
+            // Show ingredients for the selected recipe
+            // You can customize this function to display the ingredients
+            alert("Ingredients for " + recipeName);
+        }
+        function order(recipeName) {
+            // Place an order for the selected recipe
+            // You can customize this function to handle the order process
+            alert("Order placed for " + recipeName);
+        }
+    </script>
+</body>
+</html>
